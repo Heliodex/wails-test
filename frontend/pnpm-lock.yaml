@@ -10,10 +10,10 @@ importers:
     devDependencies:
       '@sveltejs/adapter-static':
         specifier: ^1.0.0
-        version: 1.0.5(@sveltejs/kit@2.52.2(@sveltejs/vite-plugin-svelte@2.0.2(svelte@5.55.7)(vite@6.4.2(@types/node@18.11.18)))(svelte@5.55.7)(typescript@4.9.5)(vite@6.4.2(@types/node@18.11.18)))
+        version: 1.0.5(@sveltejs/kit@2.60.1(@sveltejs/vite-plugin-svelte@2.0.2(svelte@5.55.7)(vite@6.4.2(@types/node@18.11.18)))(svelte@5.55.7)(typescript@4.9.5)(vite@6.4.2(@types/node@18.11.18)))
       '@sveltejs/kit':
-        specifier: ^2.52.2
-        version: 2.52.2(@sveltejs/vite-plugin-svelte@2.0.2(svelte@5.55.7)(vite@6.4.2(@types/node@18.11.18)))(svelte@5.55.7)(typescript@4.9.5)(vite@6.4.2(@types/node@18.11.18))
+        specifier: ^2.60.1
+        version: 2.60.1(@sveltejs/vite-plugin-svelte@2.0.2(svelte@5.55.7)(vite@6.4.2(@types/node@18.11.18)))(svelte@5.55.7)(typescript@4.9.5)(vite@6.4.2(@types/node@18.11.18))
       '@typescript-eslint/eslint-plugin':
         specifier: ^5.27.0
         version: 5.50.0(@typescript-eslint/parser@5.50.0(eslint@9.26.0(hono@4.11.7))(typescript@4.9.5))(eslint@9.26.0(hono@4.11.7))(typescript@4.9.5)
@@ -441,6 +441,11 @@ packages:
   '@standard-schema/spec@1.1.0':
     resolution: {integrity: sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==}
 
+  '@sveltejs/acorn-typescript@1.0.10':
+    resolution: {integrity: sha512-4WfKk68eTih+MiJD4fSbxN7E8kVBmTMPWHUPYjvl2N0rMs53YLTT8/YjKU5Dtnz5LqDjl7LEw4U7lXR2W3J5WA==}
+    peerDependencies:
+      acorn: ^8.9.0
+
   '@sveltejs/acorn-typescript@1.0.9':
     resolution: {integrity: sha512-lVJX6qEgs/4DOcRTpo56tmKzVPtoWAaVbL4hfO7t7NVwl9AAXzQR6cihesW1BmNMPl+bK6dreu2sOKBP2Q9CIA==}
     peerDependencies:
@@ -451,16 +456,16 @@ packages:
     peerDependencies:
       '@sveltejs/kit': ^1.0.0
 
-  '@sveltejs/kit@2.52.2':
-    resolution: {integrity: sha512-1in76dftrofUt138rVLvYuwiQLkg9K3cG8agXEE6ksf7gCGs8oIr3+pFrVtbRmY9JvW+psW5fvLM/IwVybOLBA==}
+  '@sveltejs/kit@2.60.1':
+    resolution: {integrity: sha512-mQjlkNo+rJvpln7V2IGY2j99BqhcFbS4UN0AQNKNYfhBAFZTuCDAdW3a1sgf330mvtNvsBXn3HpAhcmvdJTcIQ==}
     engines: {node: '>=18.13'}
     hasBin: true
     peerDependencies:
       '@opentelemetry/api': ^1.0.0
-      '@sveltejs/vite-plugin-svelte': ^3.0.0 || ^4.0.0-next.1 || ^5.0.0 || ^6.0.0-next.0
+      '@sveltejs/vite-plugin-svelte': ^3.0.0 || ^4.0.0-next.1 || ^5.0.0 || ^6.0.0-next.0 || ^7.0.0
       svelte: ^4.0.0 || ^5.0.0-next.0
-      typescript: ^5.3.3
-      vite: ^5.0.3 || ^6.0.0 || ^7.0.0-beta.0
+      typescript: ^5.3.3 || ^6.0.0
+      vite: ^5.0.3 || ^6.0.0 || ^7.0.0-beta.0 || ^8.0.0
     peerDependenciesMeta:
       '@opentelemetry/api':
         optional: true
@@ -720,9 +725,6 @@ packages:
   detect-indent@6.1.0:
     resolution: {integrity: sha512-reYkTUJAZb9gUuZ2RvVCNhVHdg62RHnJ7WJl8ftMi4diZ6NWlciOzQN88pUhSELEwflJht4oQDv0F0BMlwaYtA==}
     engines: {node: '>=8'}
-
-  devalue@5.6.3:
-    resolution: {integrity: sha512-nc7XjUU/2Lb+SvEFVGcWLiKkzfw8+qHI7zn8WYXKkLMgfGSHbgCEaR6bJpev8Cm6Rmrb19Gfd/tZvGqx9is3wg==}
 
   devalue@5.8.1:
     resolution: {integrity: sha512-4CXDYRBGqN+57wVJkuXBYmpAVUSg3L6JAQa/DFqm238G73E1wuyc/JhGQJzN7vUf/CMphYau2zXbfWzDR5aTEw==}
@@ -1354,8 +1356,8 @@ packages:
     resolution: {integrity: sha512-xRXBn0pPqQTVQiC8wyQrKs2MOlX24zQ0POGaj0kultvoOCstBQM5yvOhAVSUwOMjQtTvsPWoNCHfPGwaaQJhTw==}
     engines: {node: '>= 18'}
 
-  set-cookie-parser@3.0.1:
-    resolution: {integrity: sha512-n7Z7dXZhJbwuAHhNzkTti6Aw9QDDjZtm3JTpTGATIdNzdQz5GuFs22w90BcvF4INfnrL5xrX3oGsuqO5Dx3A1Q==}
+  set-cookie-parser@3.1.0:
+    resolution: {integrity: sha512-kjnC1DXBHcxaOaOXBHBeRtltsDG2nUiUni+jP92M9gYdW12rsmx92UsfpH7o5tDRs7I1ZZPSQJQGv3UaRfCiuw==}
 
   setprototypeof@1.2.0:
     resolution: {integrity: sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==}
@@ -1877,28 +1879,32 @@ snapshots:
 
   '@standard-schema/spec@1.1.0': {}
 
+  '@sveltejs/acorn-typescript@1.0.10(acorn@8.16.0)':
+    dependencies:
+      acorn: 8.16.0
+
   '@sveltejs/acorn-typescript@1.0.9(acorn@8.16.0)':
     dependencies:
       acorn: 8.16.0
 
-  '@sveltejs/adapter-static@1.0.5(@sveltejs/kit@2.52.2(@sveltejs/vite-plugin-svelte@2.0.2(svelte@5.55.7)(vite@6.4.2(@types/node@18.11.18)))(svelte@5.55.7)(typescript@4.9.5)(vite@6.4.2(@types/node@18.11.18)))':
+  '@sveltejs/adapter-static@1.0.5(@sveltejs/kit@2.60.1(@sveltejs/vite-plugin-svelte@2.0.2(svelte@5.55.7)(vite@6.4.2(@types/node@18.11.18)))(svelte@5.55.7)(typescript@4.9.5)(vite@6.4.2(@types/node@18.11.18)))':
     dependencies:
-      '@sveltejs/kit': 2.52.2(@sveltejs/vite-plugin-svelte@2.0.2(svelte@5.55.7)(vite@6.4.2(@types/node@18.11.18)))(svelte@5.55.7)(typescript@4.9.5)(vite@6.4.2(@types/node@18.11.18))
+      '@sveltejs/kit': 2.60.1(@sveltejs/vite-plugin-svelte@2.0.2(svelte@5.55.7)(vite@6.4.2(@types/node@18.11.18)))(svelte@5.55.7)(typescript@4.9.5)(vite@6.4.2(@types/node@18.11.18))
 
-  '@sveltejs/kit@2.52.2(@sveltejs/vite-plugin-svelte@2.0.2(svelte@5.55.7)(vite@6.4.2(@types/node@18.11.18)))(svelte@5.55.7)(typescript@4.9.5)(vite@6.4.2(@types/node@18.11.18))':
+  '@sveltejs/kit@2.60.1(@sveltejs/vite-plugin-svelte@2.0.2(svelte@5.55.7)(vite@6.4.2(@types/node@18.11.18)))(svelte@5.55.7)(typescript@4.9.5)(vite@6.4.2(@types/node@18.11.18))':
     dependencies:
       '@standard-schema/spec': 1.1.0
-      '@sveltejs/acorn-typescript': 1.0.9(acorn@8.16.0)
+      '@sveltejs/acorn-typescript': 1.0.10(acorn@8.16.0)
       '@sveltejs/vite-plugin-svelte': 2.0.2(svelte@5.55.7)(vite@6.4.2(@types/node@18.11.18))
       '@types/cookie': 0.6.0
       acorn: 8.16.0
       cookie: 0.6.0
-      devalue: 5.6.3
+      devalue: 5.8.1
       esm-env: 1.2.2
       kleur: 4.1.5
       magic-string: 0.30.21
       mrmime: 2.0.1
-      set-cookie-parser: 3.0.1
+      set-cookie-parser: 3.1.0
       sirv: 3.0.2
       svelte: 5.55.7
       vite: 6.4.2(@types/node@18.11.18)
@@ -2170,8 +2176,6 @@ snapshots:
   depd@2.0.0: {}
 
   detect-indent@6.1.0: {}
-
-  devalue@5.6.3: {}
 
   devalue@5.8.1: {}
 
@@ -2846,7 +2850,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  set-cookie-parser@3.0.1: {}
+  set-cookie-parser@3.1.0: {}
 
   setprototypeof@1.2.0: {}
 
